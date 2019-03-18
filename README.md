@@ -1,1 +1,3 @@
-# cyber-analitic
+npm install
+
+npm run start

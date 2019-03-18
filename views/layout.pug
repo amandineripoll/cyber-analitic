@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  body
+
+  block main
+  .content
+      nav.row
+        .col-md-2
+          a(href='/') Accueil
+        .col-md-2
+          a(href='/') Carte
+        .col-md-2
+          a(href='/ranking') Classement
+
+  block content
