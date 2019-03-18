@@ -1,0 +1,9 @@
+#map {
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+	width: 800px;
+    height: 400px;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+}
