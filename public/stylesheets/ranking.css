@@ -1,0 +1,57 @@
+#ranking {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#ranking > .podium {
+    position: relative;
+    height: 90px;
+    background-color: #c1c1c1;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#ranking p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: Andale Mono, monospace;
+    font-size: 18px;
+}
+
+#ranking .position p {
+    font-size: 5rem!important;
+}
+
+#ranking > .first-place {
+    background-color: #DAA520;
+}
+
+#ranking > .first-place > .position {
+    color: #BB8D1C;
+}
+
+#ranking > .second-place {
+    background-color: #C0C0C0;
+}
+
+#ranking > .second-place > .position {
+    color: #9B9B9B;
+}
+
+#ranking > .third-place {
+    background-color: #cd7f32;
+}
+
+#ranking > .third-place > .position {
+    color: #A56729;
+}
+
+#ranking > .fourth-place {
+    background-color: #83858e;
+}
+
+#ranking > .fourth-place > .position {
+    color: #5E5F66;
+}
