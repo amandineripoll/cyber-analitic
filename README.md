@@ -6,7 +6,7 @@ Dans /cyber-analitic/
 npm install
 ```
 
-### Lancer les serveurs
+### Lancer le serveur
 ```
 Dans /cyber-analitic/
 npm run start
