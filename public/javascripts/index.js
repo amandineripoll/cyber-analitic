@@ -45,5 +45,10 @@ const initializationMap = () => {
 $(document).ready(function() {
     console.log('document is ready');
     initializationMap();
-    getInformation("20180601", "20180630", "attentat");
+    
+    let information = getInformation("20180601", "20180630", "attentat");
+
+    information.then(function(value) {
+        console.log(value);
+    });
 });

@@ -1,5 +1,9 @@
-console.log('ranking');
+import { getInformation } from './service.js';
 
 $(document).ready(function(){
-    console.log('document is ready');
+    let information = getInformation("20180601", "20180630", "attentat");
+
+    information.then(function(value) {
+        console.log(value);
+    });
 });
