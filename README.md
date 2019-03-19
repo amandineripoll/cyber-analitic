@@ -1,13 +1,13 @@
-# Cyber-analitic
+# Harassment-analytic
 
 ### On installe les dépendances npm
 ```
-Dans /cyber-analitic/
+Dans /harassment-analytic/
 npm install
 ```
 
 ### Lancer le serveur
 ```
-Dans /cyber-analitic/
+Dans /harassment-analytic/
 npm run start
 ```
