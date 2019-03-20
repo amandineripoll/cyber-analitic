@@ -1,4 +1,4 @@
-import { getInformation } from './service.js';
+import { getInformations } from './service.js';
 import { Country } from './country.js';
 
 const getCountry = () => {
@@ -18,7 +18,7 @@ const getCountry = () => {
 
 const retrieveInformation = (dateStart, dateEnd, arrayCountry, order) => {
     let listing = [];
-    let information = getInformation(dateStart, dateEnd, arrayCountry);
+    let information = getInformations(dateStart, dateEnd, arrayCountry);
 
     information.then(function(value) {
         value.forEach(element => {
@@ -32,7 +32,7 @@ const createRanking = (listing, type) => {
     listing.sort(function (a, b) {
         return (type === "ASC" ? b.count - a.count : a.count - b.count);
     });
-    
+
     let tabPosition = ["first-place", "second-place", "third-place", "fourth-place"];
     listing.forEach(function (value, i) {
         if(i < 4) {
@@ -56,7 +56,7 @@ $( "#submit-interval-date" ).click(function() {
     let dateEnd = $('#date-end').val().split("-").join("");
 
     let checked = ($('#desc').is(':checked') ? "DESC" : "ASC");
-    
+
     if(dateStart != "" && dateEnd != "" && checked != "") {
         resetRanking();
         retrieveInformation(dateStart, dateEnd, getCountry(), checked);
