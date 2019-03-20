@@ -1,4 +1,4 @@
-import { getInformation } from './service.js';
+import { getInformations } from './service.js';
 
 const initializationMap = () => {
     // Themes begin
@@ -46,7 +46,7 @@ $(document).ready(function() {
     console.log('document is ready');
     initializationMap();
 
-    let information = getInformation("20180601", "20180630", "harcelement");
+    let information = getInformations("20180601", "20180630", "harcelement");
 
     information.then(function(value) {
         console.log(value);
