@@ -1,4 +1,11 @@
 import { getInformations } from './service.js';
+import { Country } from './country.js';
+
+const tabCountries = [];
+const dateStart = "20180101";
+const dateEnd = "20181231";
+const continent = "Europe";
+const country = "France";
 
 const initializationMap = () => {
     // Themes begin
@@ -43,12 +50,10 @@ const initializationMap = () => {
 }
 
 $(document).ready(function() {
-    console.log('document is ready');
     initializationMap();
-
-    let information = getInformations("20180601", "20180630", "harcelement");
-
-    information.then(function(value) {
-        console.log(value);
+    getInformations(dateStart, dateEnd).then((data) => {
+        data.forEach((element) => {
+            tabCountries.push(new Country(element.name, element.tabArticle, element.tabTranslation));
+        });
     });
 });
