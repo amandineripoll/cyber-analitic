@@ -5,20 +5,26 @@ block content
 
   .row.content
 
-    .col-md-2.filterMenu
-      .part
-        input#dateStart(type='date', placeholder='JJ/MM/YYYY' name='dateStart')
-      .part
-        input#dateEnd(type='date', placeholder='JJ/MM/YYYY' name='dateStart')
-      .part
+    .col-md-2.filter
+      .title
+        p Filtre de recherche
+      .period
+        p Période
+        input#dateStart(type='date')
+        input#dateEnd(type='date')
+      .select
         select#continents
           option(value='0' selected disabled) Choisir un continent
           option(value='usa') Amérique
           option(value='europe') Europe
-      .part
         select#countries
-          option(value='0' selected disabled) Choisir un pays
+          option(value='0' selected disabled hidden) Choisir un pays
+          each country, index in tabCountries ? tabCountries : ['vide']
+            option(value='index') country.name
+        .submit
+          button(type='button' class='btn btn-primary' id='submit-interval-date') Valider
 
-    .col-md-10.map
+    .col-md-10
+      #map
 
   script(type='module', src='/javascripts/map.js')

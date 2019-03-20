@@ -1,14 +1,21 @@
 import { Country } from './country.js';
 
-let tabCountries = [];
-tabCountries.push(new Country("France", [], {"edition": "fr-fr","word": "harcèlement" }));
-tabCountries.push(new Country("New York", [], {"edition": "en-us-ny","word" : "harassment" }));
-tabCountries.push(new Country("San Francisco", [], {"edition": "en-us-df","word" : "harassment" }));
-tabCountries.push(new Country("England", [], {"edition": "en-gb","word": "harassment" }));
-tabCountries.push(new Country("Belgium FR", [], {"edition": "fr-be","word": "harcèlement" }));
-tabCountries.push(new Country("Belgium NL", [], {"edition": "nl-be","word": "intimidatie" }));
-tabCountries.push(new Country("German", [], {"edition": "de-de","word": "Belästigung" }));
-tabCountries.push(new Country("Italia", [], {"edition": "it-it","word": "molestia" }));
+const tabCountries = getCountries();
+
+export function getCountries() {
+  let tab = [];
+
+  tab.push(new Country("France", [], {"edition": "fr-fr","word": "harcèlement" }));
+  tab.push(new Country("New York", [], {"edition": "en-us-ny","word" : "harassment" }));
+  tab.push(new Country("San Francisco", [], {"edition": "en-us-df","word" : "harassment" }));
+  tab.push(new Country("England", [], {"edition": "en-gb","word": "harassment" }));
+  tab.push(new Country("Belgium FR", [], {"edition": "fr-be","word": "harcèlement" }));
+  tab.push(new Country("Belgium NL", [], {"edition": "nl-be","word": "intimidatie" }));
+  tab.push(new Country("German", [], {"edition": "de-de","word": "Belästigung" }));
+  tab.push(new Country("Italia", [], {"edition": "it-it","word": "molestia" }));
+
+  return tab;
+}
 
 export const getInformations = (dateStart, dateEnd) => {
     return new Promise(function(resolve, reject) {
@@ -30,5 +37,5 @@ export const getInformations = (dateStart, dateEnd) => {
             }
             request.send();
         }
-      });
+    });
 }
