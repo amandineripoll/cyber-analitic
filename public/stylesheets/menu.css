@@ -3,8 +3,11 @@
     height: 82px;
   }
 
-.backgroundMenu
-{
+.ulMenu {
+    display: contents;
+}
+
+.backgroundMenu {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
     display: flex;
@@ -13,7 +16,7 @@
 }
 
 
-.menuItems{
+.menuItems {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -24,10 +27,9 @@
     text-align: right;
 }
 
-.linkMenu{
-    color: #004494;  
-    margin-right: 45px; 
-    
+.linkMenu {
+    color: #004494;
+    margin-right: 45px;
 }
 
 .linkMenu:hover {
@@ -35,18 +37,14 @@
     text-decoration:none;
 }
 
-.helpButton{
+.helpButton {
     width: 50px;
     height: 35px;
     border-radius: 4px;
     background-color: #0682ff;
 }
 
-body{
+body {
     padding:0px;
     font-family: 'Montserrat', sans-serif;
-}
-
-.liMenu{
-    display: inline;
 }
