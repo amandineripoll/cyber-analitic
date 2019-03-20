@@ -13,6 +13,8 @@
     display: flex;
     align-content: center;
     align-items: center;
+    overflow: hidden;
+    z-index: 999;
 }
 
 
@@ -42,6 +44,8 @@
     height: 35px;
     border-radius: 4px;
     background-color: #0682ff;
+    padding: 12px;
+    color: #fff!important;
 }
 
 body {

@@ -1,20 +1,141 @@
-.backgroundImg{
-    background-image: url(../images/background.png);
-    height: 700px;
+#synopsis {
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    position: relative;
 }
 
-.bannerSentence{
-    background-color: #87CEFA;
-    height: 100px;
-    display: inline-block;
-    margin-top: 150px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    vertical-align: middle;
+.synopsis > .line {
+    width: 70px;
+    height: 4px;
+    background-color: #007bff;
 }
 
-.bannerTxt{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-style: italic;
-    color:white;
+.synopsis {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.synopsis > .title {
+    color : #fff;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.synopsis > p {
+    width: 376px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.presentation {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.presentation .title {
+    font-size: 12px;
+    color : #007bff;
+    font-weight: bold;
+}
+
+.presentation .issue {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.presentation .answer {
+    font-size: 12px;
+    color: #b1b1b1;
+}
+
+.presentation .card, .presentation .card-special {
+    border-radius: 5px;
+}
+
+.presentation .card {
+    min-height: 200px;
+    margin-top: 23px;
+    border: solid 1px #e1e1e1;
+    padding: 20px;
+}
+
+.presentation .card-special {
+    min-height: 250px;
+    border: solid 2px #004494;
+    padding: 35px;
+}
+
+.presentation .cards {
+    margin-top: 25px;
+}
+
+.presentation .card img {
+    margin: 0 auto;
+}
+
+.presentation .title-card {
+    padding-top: 10px;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.presentation .infos {
+    font-size: 10px;
+    color: #b1b1b1;
+}
+
+.presentation a {
+    font-size: 12px;
+}
+
+#map {
+    height: 600px;
+    background-color: #F7F8FB;
+    position: relative;
+}
+
+.map {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 300px;
+    transform: translateY(-50%);
+}
+
+.map > .hashtag {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.map > .title {
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.map > .infos {
+    font-size: 10px;
+    color: #b1b1b1;
+}
+
+.map > a {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.map-image {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
 }

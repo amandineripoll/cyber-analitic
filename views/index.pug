@@ -3,9 +3,53 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/index.css')
 
+  #synopsis.content
+    .synopsis
+      .line
+      h3.title Cyber Harcèlement
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, nunc interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere odio fusce vel libero mi cras.
+      a(class='btn btn-primary' href='/help') En savoir plus
+
   .content
-    .row
-      .col-md-12
-        img(src='images/background.png')
+    .presentation
+      .row
+        .col-sm-12
+          p.text-center.title #CYBERHARCELEMENT
+      .row
+        .col-sm-12
+          p.text-center.issue Qu'est-ce que le Cyber Harcèlement ?
+      .row
+        .col-sm-12
+          p.text-center.answer C’est un acte agressif utilisant différentes formes de communication électronique pour menacer, insulter de manière intentionnelle et répétitive une victime.
+      .row.cards
+        .offset-sm-3
+        .col-sm-2
+          .card.text-center
+            img(src="images/shield.png", alt="logo", width="50")
+            p.title-card Carte du monde
+            p.infos Lorem ipsum dolor sit amet, consectetur interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere.
+            a(class='btn btn-link' href='/map') En savoir plus
+        .col-sm-2
+          .card-special.text-center
+            img(src="images/shield.png", alt="logo", width="50")
+            p.title-card Harcèlement scolaire
+            p.infos Lorem ipsum dolor sit amet, consectetur interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere.
+            a(class='btn btn-link' href='/help') En savoir plus
+        .col-sm-2.text-center
+          .card
+            img(src="images/shield.png", alt="logo", width="50")
+            p.title-card Harcèlement moral
+            p.infos Lorem ipsum dolor sit amet, consectetur interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere.
+            a(class='btn btn-link' href='/help') En savoir plus
+        .offset-sm-3
+
+    #map
+      .map-image
+        img(src="images/map.png", alt="map", width="750")
+      .map
+        p.hashtag Cyber Harcèlement
+        p.title Carte du monde
+        p.infos Lorem ipsum dolor sit amet, consectetur adipiscing elit, nunc interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere odio fusce vel libero mi cras at nisi tempor ex feugiat finibus quis id nulla vestibulum.
+        a(class='btn btn-primary' href='/map') Découvrir la carte
 
   script(type='module', src='/javascripts/index.js')
