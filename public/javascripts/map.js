@@ -30,15 +30,52 @@ const initializationMap = () => {
     // Make map load polygon (like country names) data from GeoJSON
     polygonSeries.useGeodata = true;
 
+    polygonSeries.data = [{
+        "id": "US",
+        "level": 1
+      }, {
+        "id": "BR",
+        "level": 1
+      }, {
+        "id": "AU",
+        "level": 2
+      }, {
+        "id": "CN",
+        "level": 1
+      }, {
+        "id": "FR",
+        "level": 2
+      },{
+        "id": "FR",
+        "level": 2
+      }]
+
     // Configure series
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = "{name}";
-    polygonTemplate.fill = chart.colors.getIndex(0);
+    polygonTemplate.fill = am4core.color("#004494");
 
     // Create hover state and set alternative fill color
     var hs = polygonTemplate.states.create("hover");
-    hs.properties.fill = chart.colors.getIndex(2);
+    hs.properties.fill = am4core.color("#0682ff");
+    
+    polygonTemplate.adapter.add("fill", function(fill, target) {
+        if (target.dataItem.dataContext && target.dataItem.dataContext.level == 1) {
+            return am4core.color("#FF4633");
+        }
+        return fill;
+      });
+      
+    polygonTemplate.adapter.add("fill", function(fill, target) {
+    if (target.dataItem.dataContext && target.dataItem.dataContext.level == 2) {
+        return am4core.color("#FFB233");
+    }
+    return fill;
+    });
 
+
+
+      
     // Create active state
     // var activeState = polygonTemplate.states.create("active");
     // activeState.properties.fill = chart.colors.getIndex(4);
