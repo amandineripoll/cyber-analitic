@@ -16,15 +16,15 @@ const getCountry = () => {
     return tabCountry;
 }
 
-const retrieveInformation = () => {
+const retrieveInformation = (dateStart, dateEnd, arrayCountry, order) => {
     let listing = [];
-    let information = getInformation("20181001", "20190101", getCountry());
+    let information = getInformation(dateStart, dateEnd, arrayCountry);
 
     information.then(function(value) {
         value.forEach(element => {
             listing.push({"name" : element.name, "count" : element.tabArticle['metadata']['count']});
         });
-        createRanking(listing, "ASC");
+        createRanking(listing, order);
     });
 }
 
@@ -44,4 +44,23 @@ const createRanking = (listing, type) => {
     });
 }
 
-retrieveInformation();
+const resetRanking = () => {
+    $('#ranking.container .name p').html('_');
+    $('#ranking.container .count p').html('_');
+}
+
+retrieveInformation("20181001", "20190101", getCountry(), "ASC");
+
+$( "#submit-interval-date" ).click(function() {
+    let dateStart = $('#date-start').val().split("-").join("");
+    let dateEnd = $('#date-end').val().split("-").join("");
+
+    let checked = ($('#desc').is(':checked') ? "DESC" : "ASC");
+    
+    if(dateStart != "" && dateEnd != "" && checked != "") {
+        resetRanking();
+        retrieveInformation(dateStart, dateEnd, getCountry(), checked);
+    } else {
+        console.log('need date start and date end')
+    }
+});

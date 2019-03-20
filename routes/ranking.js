@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET ranking. */
 router.get('/', function(req, res, next) {
-  res.render('ranking', { title: 'Ranking' });
+  res.render('ranking');
 });
 
 module.exports = router;
