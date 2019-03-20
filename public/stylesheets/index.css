@@ -1,9 +1,11 @@
-.backgroundImg{
+.backgroundImg {
     background-image: url(../images/background.png);
-    height: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 90vh;
 }
 
-.bannerSentence{
+.bannerSentence {
     background-color: #87CEFA;
     height: 100px;
     display: inline-block;
@@ -12,9 +14,10 @@
     vertical-align: middle;
 }
 
-.bannerTxt{
+.bannerTxt {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     font-style: italic;
-    color:white;
+    color: white;
+    
 }
