@@ -7,3 +7,24 @@
     transform: translateX(-50%);
     margin-bottom: 50px;
 }
+
+.backgroundImg{
+    background-image: url(../images/background.png);
+    height: 700px;
+}
+
+.bannerSentence{
+    background-color: #87CEFA;
+    height: 100px;
+    display: inline-block;
+    margin-top: 150px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    vertical-align: middle;
+}
+
+.bannerTxt{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    color:white;
+}
