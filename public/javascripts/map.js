@@ -1,7 +1,7 @@
-import { getInformations } from './service.js';
+import { getInformations, getCountries } from './service.js';
 import { Country } from './country.js';
 
-const tabCountries = [];
+const tabCountries = []
 const dateStart = "20180101";
 const dateEnd = "20181231";
 const continent = "Europe";
@@ -88,7 +88,7 @@ const initializationMap = () => {
 
 $(document).ready(function() {
     initializationMap();
-    getInformations(dateStart, dateEnd).then((data) => {
+    getInformations(dateStart, dateEnd, getCountries).then((data) => {
         data.forEach((element) => {
             tabCountries.push(new Country(element.name, element.tabArticle, element.tabTranslation));
         });
