@@ -1,5 +1,4 @@
 #ranking {
-    width: 60%;
     margin: 0 auto;
 }
 
@@ -54,4 +53,33 @@
 
 #ranking > .fourth-place > .position {
     color: #5E5F66;
+}
+
+#filtre {
+    height: 392px;
+    margin-top: 5px;
+    background-color: #f1f1f1;
+}
+
+#filtre > .title {
+    text-align: center;
+    padding: 10px;
+}
+
+#filtre > .date, #filtre > .order {
+    padding-left: 10px;
+    margin-bottom: 45px;
+}
+
+#filtre > .date > p, #filtre > .order > p {
+    font-size: 15px;
+    color: #a2a2a2;
+}
+
+#filtre > .order > label {
+    display: block;
+}
+
+#filtre > .submit {
+    text-align: center;
 }

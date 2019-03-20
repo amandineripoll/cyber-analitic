@@ -3,9 +3,22 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/map.css')
 
-  h1= title
-  p Here for : #{title}
+  .row.content
 
-  #map
+    .col-md-2.filterMenu
+      .part
+        input#dateStart(type='date', placeholder='JJ/MM/YYYY' name='dateStart')
+      .part
+        input#dateEnd(type='date', placeholder='JJ/MM/YYYY' name='dateStart')
+      .part
+        select#continents
+          option(value='0' selected disabled) Choisir un continent
+          option(value='usa') Amérique
+          option(value='europe') Europe
+      .part
+        select#countries
+          option(value='0' selected disabled) Choisir un pays
+
+    .col-md-10.map
 
   script(type='module', src='/javascripts/map.js')
