@@ -3,18 +3,20 @@ link(rel='stylesheet', href='/stylesheets/menu.css')
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-nav.navbar.navbar-default
+nav.navbar.navbar-default.backgroundMenu 
     .container-fluid
         .navbar-header
             img.logo(src='images/shield.png')
         ul.nav.navbar-nav.ulMenu
-            li
+            li.menuItems
                 a.linkMenu(href='/') Accueil
-            li
+            li.menuItems
                 a.linkMenu(href='/map') Carte du monde
-            li
+            li.menuItems
                 a.linkMenu(href='/ranking') Classement
-            li
+            li.menuItems
                 a.linkMenu(href='/stats') Statistiques
-            li
-                a.linkMenu(href='/help') Besoin d'aide
+            li.menuItems
+                a.linkMenu.helpButton(href='/help') Besoin d'aide
+            li.menuItems
+                a.linkMenu(href='/contact') Contact
