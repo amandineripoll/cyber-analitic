@@ -48,8 +48,8 @@ const createRanking = (dateStart, dateEnd, listing, type) => {
 }
 
 const resetRanking = () => {
-    $('#ranking.container .name p').html('_');
-    $('#ranking.container .count p').html('_');
+    $('#ranking.container .name p').html('<img src="images/preloader.gif" alt="preloader" width="30px"/>');
+    $('#ranking.container .count p').html('<img src="images/preloader.gif" alt="preloader" width="30px"/>');
     $('#date').html("");
     $('#more').hide();
     $('#less').hide();
@@ -58,10 +58,11 @@ const resetRanking = () => {
 }
 
 const createArticles = (dateStart, dateEnd, data) => {
+    $('#loading').hide();
     let dateStartClean = dateStart.substring(6, 8) + "/" + dateStart.substring(4, 6) +"/" + dateStart.substring(0, 4);
     let dateEndClean = dateEnd.substring(6, 8) + "/" + dateEnd.substring(4, 6) +"/" + dateEnd.substring(0, 4);
     $('#date-articles').html("du " + dateStartClean + " au " + dateEndClean);
-
+    
     for (let i = 0; i < data.articles.length; i++) {
         $('#articles').append("<div class='col-sm-12'><div class='card-article'><img src='"+data.articles[i]['img_uri']+"' alt='article' width='100%'/><p class='nbr-like'>"+data.articles[i]['social_score']+" <i class='fas fa-heart'></i></p><p class='title'>"+data.articles[i]['name']+"</p><div class='link-more'><a class='btn btn-link' href='"+data.articles[i]['url']+"' target='_blank'>En savoir plus</a></div></div></div>");
     }
@@ -101,6 +102,7 @@ $( "#submit-interval-date-articles" ).click(function() {
     if(dateStart != "" && dateEnd != "") {
         $('#date-articles').html('');
         $('#articles').html('');
+        $('#loading').fadeIn();
         retrieveInformationsArticlesLiked(dateStart, dateEnd, "2");
     } else {
         console.log('need date start and date end')
@@ -137,4 +139,5 @@ $('#reset-articles').click(function() {
     $('#date-articles').html('');
     $('#articles').html('');
     retrieveInformationsArticlesLiked("20180101", "20190101", "2");
+    $('#loading').fadeIn();
 });

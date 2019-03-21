@@ -140,6 +140,7 @@
 .map > .infos, #evolution .infos {
     font-size: 10px;
     color: #b1b1b1;
+    width: 350px;
 }
 
 .map > a, #harassment a, #evolution a,  #ranking a {
@@ -152,6 +153,12 @@
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
+}
+
+#map .btn-ranking {
+    border: solid 2px #007bff!important;
+    color: #007bff!important;
+    font-weight: bold;
 }
 
 #news {

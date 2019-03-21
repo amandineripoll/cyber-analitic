@@ -26,31 +26,34 @@ block content
         .col-sm-2
           .card.text-center
             img(src="images/world.png", alt="logo", width="50")
-            p.title-card Carte du monde
-            p.infos Lorem ipsum dolor sit amet, consectetur interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere.
-            a(class='btn btn-link' href='/map') En savoir plus
+            p.title-card La violence
+            p.infos Rapport de force et de domination entre une ou plusieurs personne et une ou plusieurs victime.
+            a(class='btn btn-link' href='https://www.gouvernement.fr/action/la-lutte-contre-le-harcelement-et-les-violences-en-milieu-scolaire' target="_blank") En savoir plus
         .col-sm-2
           .card-special.text-center
-            img(src="images/discussion.png", alt="logo", width="50")
-            p.title-card Harcèlement scolaire
-            p.infos Lorem ipsum dolor sit amet, consectetur interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere.
-            a(class='btn btn-link' href='/help') En savoir plus
+            img(src="images/discussion.png", alt="logo", width="75")
+            p.title-card La répetitivité
+            p.infos Agressions qui se répètent régulièrement durant une longue période.
+            a(class='btn btn-link' href='http://www.i-share.fr/actualite/le-harcelement-scolaire-quen-est-il-en-2018' target="_blank") En savoir plus
         .col-sm-2.text-center
           .card
             img(src="images/world.png", alt="logo", width="50")
-            p.title-card Harcèlement moral
-            p.infos Lorem ipsum dolor sit amet, consectetur interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere.
-            a(class='btn btn-link' href='/help') En savoir plus
+            p.title-card L'isolement
+            p.infos La victime est souvent isolée, plus petite, faible physiquement, et dans l'incapacité de se défendre.
+            a(class='btn btn-link' href='http://www.officiel-prevention.com/protections-collectives-organisation-ergonomie/psychologie-du-travail/detail_dossier_CHSCT.php?rub=38&ssrub=163&dossid=403' target="_blank") En savoir plus
         .offset-sm-3
 
     #map
       .map-image
         img(src="images/map.png", alt="map", width="750")
       .map
-        p.hashtag Cyber Harcèlement
+        p.hashtag Niveau mondial
         p.title Carte du monde
-        p.infos Lorem ipsum dolor sit amet, consectetur adipiscing elit, nunc interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere odio fusce vel libero mi cras at nisi tempor ex feugiat finibus quis id nulla vestibulum.
+        p.infos À travers cette date visualisation en forme de carte, découvrez les pays qui abordent plus ou moins la problématique du harcèlement ainsi que les articles qui y correspondent.
         a(class='btn btn-primary' href='/map') Découvrir la carte
+        |
+        |
+        a(class='btn btn-light btn-ranking' href='/ranking') Classement
 
     #news
       .news
@@ -70,12 +73,13 @@ block content
           .col-sm-3.text-center
             .news-card
               p ok
+    
     #harassment
       .harassment.row
         .col-sm-6.block-infos
           .line
           p.title Que faire en cas de harcèlement ?
-          p.infos Le harcèlement est la répétition de propos et de comportements ayant pour but ou effet une dégradation des conditions de vie de la victime. Cela se traduit par des conséquences sur la santé physique ou mentale de la personne harcelée.
+          p.infos Victime de harcèlement ? Il n'est pas toujours facile de parler ou de demander de l'aide pour sortir d'une situation compliquée, voir dangereuse. Pour autant, la prise en charge des victimes de harcèlement se développe de plus en plus avec l'existance, dans chaque département de France, de dispositifs de soutiens et d'assistances.
           a(class='btn btn-primary' href='/contact') Nous contacter
         .col-sm-6
           img(src="images/harassment-computer.png", alt="harassment")
@@ -85,21 +89,19 @@ block content
         .col-sm-6.text-center
           img(src="images/evolution.png", alt="evolution")
         .col-sm-6.block-evolution
-          p.hashtag Cyber Harcèlement
-          p.title Évolution du cyberharcèlement
-          p.infos Lorem ipsum dolor sit amet, consectetur adipiscing elit, nunc interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere odio fusce vel libero mi cras at nisi tempor ex feugiat finibus quis id nulla vestibulum.
-          a(class='btn btn-primary' href='/stats') Découvrir les statistiques
+          p.hashtag Une évolution constante
+          p.title Évolution du harcèlement
+          p.infos La harcèlement est en constante augmentation depuis ces derniers années. Découvrez à travers ces statistiques l'évolution du harcèlement sur 5 années. Les résultats sont surprenants.
+          a(class='btn btn-primary' href='/stats') En savoir plus
 
     #ranking
       .ranking.row
         .col-sm-6.block-infos
           .line
-          p.title Classement du cyberharcèlement
-          p.infos Lorem ipsum dolor sit amet, consectetur adipiscing elit, nunc interdum lacinia fermentum, maecenas quam velit, mollis id massa et efficitur posuere odio fusce vel libero mi cras at nisi tempor ex feugiat finibus quis id nulla vestibulum.
+          p.title Classement du harcèlement
+          p.infos La harcèlement est présent dans la plupart des pays du monde entier. Découvrez quel pays en parle le plus et quel pays en parle le moins entre un interval de date défini grâce à un filtrage.
           a(class='btn btn-primary' href='/ranking') Découvrir le classement
         .col-sm-6.text-center
           img(src="images/ranking.gif", alt="ranking")
-
-
 
   script(type='module', src='/javascripts/index.js')

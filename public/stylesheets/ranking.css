@@ -215,3 +215,9 @@
 #articles .link-more{
     text-align: center;
 }
+
+#loading {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
