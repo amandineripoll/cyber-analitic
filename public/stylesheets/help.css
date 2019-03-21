@@ -10,6 +10,8 @@
     display: flex;
     align-content: center;
     align-items: center;
+    background-image: url('../images/Background_harcelement.png');
+    background-size:cover;
 }
 
 .divHarassment{
