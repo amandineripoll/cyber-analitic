@@ -2,25 +2,20 @@ import { Country } from './country.js';
 
 export const getYears = () => ["2019", "2018", "2017", "2016", "2015"];
 export const getCountries = () => {
-  let tab = [];
-  tab.push(new Country("FR", "France", {"edition": "fr-fr","word": "harcèlement" }, []));
-  tab.push(new Country("", "New York", {"edition": "en-us-ny","word" : "harassment" }, []));
-  tab.push(new Country("", "San Francisco", {"edition": "en-us-df","word" : "harassment" }, []));
-  tab.push(new Country("", "Angleterre", {"edition": "en-gb","word": "harassment" }, []));
-  tab.push(new Country("", "Belgique FR", {"edition": "fr-be","word": "harcèlement" }, []));
-  tab.push(new Country("", "Belgique NL", {"edition": "nl-be","word": "intimidatie" }, []));
-  tab.push(new Country("", "Allemagne", {"edition": "de-de","word": "Belästigung" }, []));
-  tab.push(new Country("", "Italie", {"edition": "it-it","word": "molestia" }, []));
-  return tab;
+    let tab = [];
+    tab.push(new Country("FR", "France", {"edition": "fr-fr","word": "harcèlement" }, []));
+    tab.push(new Country("US", "New York", {"edition": "en-us-ny","word" : "harassment" }, []));
+    tab.push(new Country("US", "San Francisco", {"edition": "en-us-df","word" : "harassment" }, []));
+    tab.push(new Country("GB", "United Kingdom", {"edition": "en-gb","word": "harassment" }, []));
+    tab.push(new Country("BE", "Belgium FR", {"edition": "fr-be","word": "harcèlement" }, []));
+    tab.push(new Country("BE", "Belgium NL", {"edition": "nl-be","word": "intimidatie" }, []));
+    tab.push(new Country("DE", "Germany", {"edition": "de-de","word": "Belästigung" }, []));
+    tab.push(new Country("IT", "Italy", {"edition": "it-it","word": "molestia" }, []));
+    return tab;
 }
 
 const tabCountries = getCountries();
 const tabYears = getYears();
-
-var test;
-export const getTest = () => {
-    return test;
-}
 
 export const getInformations = (year) => {
     return new Promise(function(resolve, reject) {
@@ -35,6 +30,7 @@ export const getInformations = (year) => {
                     tabCountries[j].tabArticles = data['articles'];
                     cpt++;
                     if(cpt == tabCountries.length) {
+                        console.log("données chargées");
                         resolve(tabCountries);
                     }
                 } else {

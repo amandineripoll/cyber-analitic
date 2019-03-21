@@ -6,7 +6,7 @@ const tabCountries = getCountries();
 const retrieveInformations = (year, order) => {
     let listing = [];
     getInformations(year).then((data) => {
-        data.forEach(element => {
+        data.forEach((element) => {
             listing.push({ "name": element.name, "count": element.tabArticles.length });
         });
         createRanking(dateStart, dateEnd, listing, order);
