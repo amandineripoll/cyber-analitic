@@ -8,22 +8,26 @@ block content
     .col-md-2.filter
       .title
         p Filtre de recherche
-        select#years
-          option(value='0' selected disabled) Choisir une année
-          option(value='2019') 2019
-          option(value='2018') 2018
-          option(value='2017') 2017
-          option(value='2016') 2016
-          option(value='2015') 2015
-        select#countries
-          option(value='0' selected disabled) Choisir un pays
-          option(value='france') France
-          option(value='newyork') New York
-          option(value='sanfrancisco') San Francisco
-          option(value='belgium') Belgique
-          option(value='italia') Italie
-        .submit
-          button.btn.btn-primary#submit-filter(type='button') Valider
+        form(method='POST' action='/map')#filterForm
+          div.form-group
+            select#years
+              option(value='0' selected disabled) Choisir une année
+              option(value='2019') 2019
+              option(value='2018') 2018
+              option(value='2017') 2017
+              option(value='2016') 2016
+              option(value='2015') 2015
+          div.form-group
+            select#countries
+              option(value='0' selected disabled) Choisir un pays
+              option(value='FR') France
+              option(value='US') New York
+              option(value='sanfrancisco') San Francisco
+              option(value='GB') United Kingdom
+              option(value='BE') Belgique
+              option(value='DE') Germany
+              option(value='IT') Italy
+          button.btn.btn-primary#btnSubmit(type='button') Valider
 
     .col-md-10
       #map

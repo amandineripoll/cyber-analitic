@@ -4,20 +4,24 @@ import { Country } from './country.js';
 var polygonSeries;
 var tabCountries = [];
 var tabYears = getYears();
-var year = "2017";
+
+var filterForm = document.getElementById('filterForm');
+var selectYears = document.getElementById('years');
+var selectCountries = document.getElementById('countries');
+var btnSubmit = document.getElementById('btnSubmit');
 
 $(document).ready(function() {
     initializationMap();
 });
 
-function submit() {
-    getInformations(year).then((data) => {
+btnSubmit.onclick = () => {
+    getInformations(selectYears.value).then((data) => {
         tabCountries = data;
         colorMap();
     });
 }
 
-function colorMap() {
+const colorMap = () => {
     var min = tabCountries[0].tabArticles.length;
     var max = 0;
     for(let i = 0; i < tabCountries.length; i++) {
@@ -37,16 +41,10 @@ function colorMap() {
         if(country) {
           const size = country.tabArticles.length;
           var level = 0;
-          if(size <= max && size > medMax) {
-              level = 1;
-          }
-          else if(size <= medMax && size > medMin) {
-              level = 2;
-          }
-          else if(size <= medMin && size > min) {
-              level = 3;
-          }
-          item.level = level
+          if(size <= max && size > medMax) { level = 1; } // level max
+          else if(size <= medMax && size > medMin) { level = 2; } // level med
+          else if(size <= medMin && size > min) { level = 3; } // level min
+          item.level = level;
         }
         return item;
     });
@@ -107,15 +105,18 @@ const initializationMap = () => {
 
     // color according to level
     polygonTemplate.adapter.add("fill", function(fill, target) {
+        // color level max
         if (target.dataItem.dataContext && target.dataItem.dataContext.level == 1) {
             return am4core.color("#FF4633");
         }
+        // color level med
         else if (target.dataItem.dataContext && target.dataItem.dataContext.level == 2) {
             return am4core.color("#FFB233");
         }
+        // color level min
         else if (target.dataItem.dataContext && target.dataItem.dataContext.level == 3) {
             return am4core.color("#000");
         }
         return fill;
-      });
+    });
 }
