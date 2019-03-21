@@ -3,60 +3,104 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/ranking.css')
 
-  .container
+  .container-fluid#page-ranking
     .row
-      .col-sm-3
+      .col-sm-4
         #filtre
           .title
-            p Filtre de recherche
-
+            p Filtre du classement
           .date
-            p Interval de date
+            span Du  
             input(type="date" id='date-start')
+            span  au 
             input(type="date" id='date-end')
-
           .order
-            p Ordre
             label Croissant 
               input(type="radio" name="order" id='asc' checked)
+            |
+            |
             label Décroissant 
               input(type="radio" name="order" id='desc')
-            
           .submit
-            button(type='button' class='btn btn-primary' id='submit-interval-date') Valider
+            button(type='button' class='btn btn-primary' id='submit-interval-date') Rechercher
+            |
+            |
+            button(type='button' class='btn btn-light btn-reset' id='reset') Réinitialiser
+          
+          .title.articles
+            p Articles les plus aimés sur facebook en France
+            #date-articles.row
 
-      .col-sm-9
+          #articles
+          .date
+            span Du  
+            input(type="date" id='date-start-article')
+            span  au 
+            input(type="date" id='date-end-article')
+          .submit
+            button(type='button' class='btn btn-primary' id='submit-interval-date-articles') Rechercher
+            |
+            |
+            button(type='button' class='btn btn-light btn-reset' id='reset-articles') Réinitialiser
+
+      .col-sm-8
+        p.title-ranking Classement
+        p#date
         #ranking.container
+          .row.podium-title
+            .col-sm-4.text-center
+              p Ordre
+            .col-sm-4.text-center
+              p Pays
+            .col-sm-4.text-center
+              p Nombre d'articles
+
           .row.first-place.podium
             .col-sm-4.text-center.position
-              p 1
+              p.data #1
             .col-sm-4.text-center.name
-              p _
+              p.data _
             .col-sm-4.text-center.count
-              p _
+              p.data _
 
           .row.second-place.podium
             .col-sm-4.text-center.position
-              p 2
+              p.data #2
             .col-sm-4.text-center.name
-              p _
+              p.data _
             .col-sm-4.text-center.count
-              p _
+              p.data _
 
           .row.third-place.podium
             .col-sm-4.text-center.position
-              p 3
+              p.data #3
             .col-sm-4.text-center.name
-              p _
+              p.data _
             .col-sm-4.text-center.count
-              p _
+              p.data _
 
-          .row.fourth-place.podium
+          .row.fourth-place.other-place.podium
             .col-sm-4.text-center.position
-              p 4
+              p.data #4
             .col-sm-4.text-center.name
-              p _
+              p.data _
             .col-sm-4.text-center.count
-              p _
+              p.data _
+          
+          .row.fifth-place.other-place.podium
+            .col-sm-4.text-center.position
+              p.data #5
+            .col-sm-4.text-center.name
+              p.data _
+            .col-sm-4.text-center.count
+              p.data _
+          
+          #other-place
+
+          #more
+            p.data Charger plus
+
+          #less
+            p.data Charger moins
 
   script(type='module', src='/javascripts/ranking.js')
