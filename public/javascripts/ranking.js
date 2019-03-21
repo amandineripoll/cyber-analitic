@@ -43,7 +43,7 @@ $( "#submit-interval-date" ).click(function() {
     
     if(dateStart != "" && dateEnd != "" && checked != "") {
         resetRanking();
-        retrieveInformation(dateStart, dateEnd, tabCountries, checked);
+        retrieveInformation(dateStart, dateEnd, checked);
     } else {
         console.log('need date start and date end')
     }

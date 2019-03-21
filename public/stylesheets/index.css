@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.synopsis > .line {
+.line {
     width: 70px;
     height: 4px;
     background-color: #007bff;
@@ -33,7 +33,7 @@
     color: #fff;
 }
 
-.presentation {
+.presentation, .evolution {
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -47,6 +47,7 @@
 .presentation .issue {
     font-size: 30px;
     font-weight: bold;
+    color : #1E2F4F;
 }
 
 .presentation .answer {
@@ -61,13 +62,14 @@
 .presentation .card {
     min-height: 200px;
     margin-top: 23px;
-    border: solid 1px #e1e1e1;
+    border: solid 1px #1A8BFF;
     padding: 20px;
+    background-color: #F7F8FB;
 }
 
 .presentation .card-special {
     min-height: 250px;
-    border: solid 2px #004494;
+    border: solid 2px #1A8BFF;
     padding: 35px;
 }
 
@@ -82,7 +84,7 @@
 .presentation .title-card {
     padding-top: 10px;
     font-size: 14px;
-    color: #000;
+    color : #1E2F4F;
     font-weight: bold;
 }
 
@@ -109,7 +111,7 @@
     transform: translateY(-50%);
 }
 
-.map > .hashtag {
+.map > .hashtag, #evolution .hashtag {
     font-size: 16px;
     font-weight: bold;
     color: #007bff;
@@ -117,18 +119,19 @@
     text-transform: uppercase;
 }
 
-.map > .title {
+.map > .title, #evolution .title {
     font-size: 35px;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #1E2F4F;
 }
 
-.map > .infos {
+.map > .infos, #evolution .infos {
     font-size: 10px;
     color: #b1b1b1;
 }
 
-.map > a {
+.map > a, #harassment a, #evolution a {
     margin-top: 15px;
     font-size: 12px;
 }
@@ -138,4 +141,42 @@
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
+}
+
+#news {
+    height: 150px;
+    background-color: #fff;
+    position: relative;
+}
+
+#harassment {
+    padding-top: 175px;
+    padding-bottom: 175px;
+    background-color: #F7F8FB;
+    position: relative;
+    background-image: url('../images/background-harassment.png');
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: right -15% bottom 45%;
+}
+
+#harassment .title {
+    color : #1E2F4F;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#harassment .infos {
+    font-size: 10px;
+    color: #b1b1b1;
+    width: 350px;
+}
+
+#harassment .block-infos {
+    padding-top: 30px;
+    left: 10%;
+}
+
+#evolution .block-evolution {
+    padding-top: 75px;
 }
