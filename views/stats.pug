@@ -3,5 +3,7 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/stats.css')
 
-  h1= title
-  p Here for : #{title}
+  .row.content
+      canvas#myChart
+
+  script(type='module', src='/javascripts/stats.js')
