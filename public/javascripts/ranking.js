@@ -1,20 +1,17 @@
-import { getInformations } from './service.js';
-import { getInformationsArticles } from './service.js';
+import { getInformationsYear, getInformationsPeriod } from './service.js';
 
-const retrieveInformation = (dateStart, dateEnd, order) => {
+const retrieveInformations = (year, order) => {
     let listing = [];
-    let information = getInformations(dateStart, dateEnd);
-
-    information.then(function(value) {
-        value.forEach(element => {
-            listing.push({"name" : element.name, "count" : element.tabArticle['metadata']['count']});
+    getInformationsYear(year).then((data) => {
+        data.forEach((element) => {
+            listing.push({ "name": element.name, "count": element.tabArticles.length });
         });
         createRanking(dateStart, dateEnd, listing, order);
     });
 }
 
-const retrieveInformationArticlesLiked = (dateStart, dateEnd, limit) => {
-    let information = getInformationsArticles(dateStart, dateEnd, (limit-1));
+const retrieveInformationsArticlesLiked = (dateStart, dateEnd, limit) => {
+    let information = getInformationsPeriod(dateStart, dateEnd, (limit-1));
 
     information.then(function(value) {
         createArticles(dateStart, dateEnd, value);
@@ -28,8 +25,8 @@ const createRanking = (dateStart, dateEnd, listing, type) => {
 
     let dateStartClean = dateStart.substring(6, 8) + "/" + dateStart.substring(4, 6) +"/" + dateStart.substring(0, 4);
     let dateEndClean = dateEnd.substring(6, 8) + "/" + dateEnd.substring(4, 6) +"/" + dateEnd.substring(0, 4);
-    $('#date').html(dateStartClean + " au " + dateEndClean);
-    
+    $('#date').html("du " + dateStartClean + " au " + dateEndClean);
+
     let tabPosition = ["first-place", "second-place", "third-place", "fourth-place", "fifth-place"];
     let other = false;
     listing.forEach(function (value, i) {
@@ -72,28 +69,25 @@ const createArticles = (dateStart, dateEnd, data) => {
 /*
 * Création du classement
 */
-
-retrieveInformation("20190201", "20190301", "ASC");
+retrieveInformations("20190201", "20190301", "ASC");
 
 /*
 * Récupération des articles
 */
-
-retrieveInformationArticlesLiked("20180101", "20190101", "2");
+retrieveInformationsArticlesLiked("20180101", "20190101", "2");
 
 /*
 * Fonction evenement
 */
-
 $( "#submit-interval-date" ).click(function() {
     let dateStart = $('#date-start').val().split("-").join("");
     let dateEnd = $('#date-end').val().split("-").join("");
 
     let checked = ($('#desc').is(':checked') ? "DESC" : "ASC");
-    
+
     if(dateStart != "" && dateEnd != "" && checked != "") {
         resetRanking();
-        retrieveInformation(dateStart, dateEnd, checked);
+        retrieveInformations(dateStart, dateEnd, checked);
     } else {
         console.log('need date start and date end')
     }
@@ -102,11 +96,11 @@ $( "#submit-interval-date" ).click(function() {
 $( "#submit-interval-date-articles" ).click(function() {
     let dateStart = $('#date-start-article').val().split("-").join("");
     let dateEnd = $('#date-end-article').val().split("-").join("");
-    
+
     if(dateStart != "" && dateEnd != "") {
         $('#date-articles').html('');
         $('#articles').html('');
-        retrieveInformationArticlesLiked(dateStart, dateEnd, "2");
+        retrieveInformationsArticlesLiked(dateStart, dateEnd, "2");
     } else {
         console.log('need date start and date end')
     }
@@ -131,7 +125,7 @@ $('#reset').click(function() {
     jQuery(".order input:eq(0)").prop( "checked", true );
     //reset le classement
     resetRanking();
-    retrieveInformation("20190201", "20190301", "ASC");
+    retrieveInformations("20190201", "20190301", "ASC");
 });
 
 $('#reset-articles').click(function() {
@@ -141,5 +135,5 @@ $('#reset-articles').click(function() {
     //reset les articles
     $('#date-articles').html('');
     $('#articles').html('');
-    retrieveInformationArticlesLiked("20180101", "20190101", "2");
+    retrieveInformationsArticlesLiked("20180101", "20190101", "2");
 });

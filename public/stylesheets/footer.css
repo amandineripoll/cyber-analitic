@@ -7,7 +7,7 @@ footer {
     height: 70px;
 }
 
-.legal-notice > p {
+.legal-notice > a {
     margin: 0 auto;
     color: #c1c1c1;
     font-size: 12px;
