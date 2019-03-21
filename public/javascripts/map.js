@@ -2,40 +2,33 @@ import { getInformations, getCountries, getYears } from './service.js';
 import { Country } from './country.js';
 
 var tabCountries = [];
-var currentTab = [];
 var tabYears = getYears();
 var year = "2018";
-/*const year = $(document).getElementById['years'].value;
-const country = $(document).getElementById['countries'].value;*/
 
 $(document).ready(function() {
     initializationMap();
-    getInformations().then((data) => {
+    getInformations(year).then((data) => {
         tabCountries = data;
         colorMap();
     });
 });
 
 function colorMap() {
-  console.log("fin");
-  console.log(tabCountries);
-  console.log(currentTab);
-
-  var min = currentTab[0].tabArticle[0]['articles'].length;
+  var min = tabCountries[0].tabArticles.length;
   var max = 0;
-  for(let i = 0; i < currentTab.length; i++) {
-    var nbArticles = 0;
-    for(let j = 0; j < currentTab[i].tabArticle.length; j++) {
-      nbArticles += currentTab[i].tabArticle[j]['articles'].length;
+  for(let i = 0; i < tabCountries.length; i++) {
+    if(min > tabCountries[i].tabArticles.length && tabCountries[i].tabArticles.length != 0) {
+      min = tabCountries[i].tabArticles.length;
     }
-    if(min > nbArticles) {
-      min = nbArticles;
-    }
-    if(max < nbArticles) {
-      max = nbArticles;
+    if(max < tabCountries[i].tabArticles.length) {
+      max = tabCountries[i].tabArticles.length;
     }
   }
   var med = (max - min) / 2;
+
+  console.log(max);
+  console.log(min);
+  console.log(med);
 
   /*polygonSeries.data = [{
         "id": "US",

@@ -3,11 +3,11 @@ import { getInformationsArticles } from './service.js';
 
 const tabCountries = getCountries();
 
-const retrieveInformations = (order) => {
+const retrieveInformations = (year, order) => {
     let listing = [];
-    getInformations().then((data) => {
+    getInformations(year).then((data) => {
         data.forEach(element => {
-            listing.push({"name" : element.name, "count" : element.tabArticle['metadata']['count']});
+            listing.push({ "name": element.name, "count": element.tabArticles.length });
         });
         createRanking(dateStart, dateEnd, listing, order);
     });
