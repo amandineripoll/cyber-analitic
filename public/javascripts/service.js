@@ -26,13 +26,13 @@ export const getInformations = (year) => {
     return new Promise(function(resolve, reject) {
         var cpt = 0;
         // boucle sur la tabCountries pour faire une recherche d'edition par pays (=country)
-        for (let j = 0; j < tabCountries.length; j++) {
+        for (let i = 0; i < tabCountries.length; i++) {
             let request = new XMLHttpRequest();
-            request.open('GET', 'https://api.ozae.com/gnw/articles?date='+year+'0101__'+year+'1231&edition='+tabCountries[j].tabTranslation['edition']+'&query='+tabCountries[j].tabTranslation['word']+'&key=646c7b6710c14533be68450f2d61d15d', true)
+            request.open('GET', 'https://api.ozae.com/gnw/articles?date='+year+'0101__'+year+'1231&edition='+tabCountries[i].tabTranslation['edition']+'&query='+tabCountries[i].tabTranslation['word']+'&key=646c7b6710c14533be68450f2d61d15d', true)
             request.onload = function() {
                 let data = JSON.parse(this.response);
                 if (request.status >= 200 && request.status < 400) {
-                    tabCountries[j].tabArticles = data['articles'];
+                    tabCountries[i].tabArticles = data['articles'];
                     cpt++;
                     if(cpt == tabCountries.length) {
                         resolve(tabCountries);
@@ -42,6 +42,33 @@ export const getInformations = (year) => {
                 }
             }
             request.send();
+        }
+    });
+}
+
+export const getInformationsStats = () => {
+    return new Promise(function(resolve, reject) {
+        var cpt = 0;
+        // boucle sur la tabYears pour rechercher sur toutes les années
+        for (let i = 0; i < tabYears.length; i++) {
+            // boucle sur la tabCountries pour faire une recherche d'edition par pays (=country)
+            for (let j = 0; j < tabCountries.length; j++) {
+                let request = new XMLHttpRequest();
+                request.open('GET', 'https://api.ozae.com/gnw/articles?date='+tabYears[i]+'0101__'+tabYears[i]+'1231&edition='+tabCountries[j].tabTranslation['edition']+'&query='+tabCountries[j].tabTranslation['word']+'&key=646c7b6710c14533be68450f2d61d15d', true)
+                request.onload = function() {
+                    let data = JSON.parse(this.response);
+                    if (request.status >= 200 && request.status < 400) {
+                        tabCountries[j].tabArticles.push({ "year": tabYears[i], "count": data['articles'].length }) ;
+                        cpt++;                        
+                        if(cpt == tabCountries.length * tabYears.length) {
+                            resolve(tabCountries);
+                        }
+                    } else {
+                        reject('error');
+                    }
+                }
+                request.send();
+            }
         }
     });
 }
