@@ -28,7 +28,7 @@ const createRanking = (dateStart, dateEnd, listing, type) => {
 
     let dateStartClean = dateStart.substring(6, 8) + "/" + dateStart.substring(4, 6) +"/" + dateStart.substring(0, 4);
     let dateEndClean = dateEnd.substring(6, 8) + "/" + dateEnd.substring(4, 6) +"/" + dateEnd.substring(0, 4);
-    $('#date').html(dateStartClean + " au " + dateEndClean);
+    $('#date').html("du " + dateStartClean + " au " + dateEndClean);
     
     let tabPosition = ["first-place", "second-place", "third-place", "fourth-place", "fifth-place"];
     let other = false;
