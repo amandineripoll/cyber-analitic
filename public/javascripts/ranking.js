@@ -1,17 +1,18 @@
-import { getInformationsYear, getInformationsPeriod } from './service.js';
+import { getInformationsPeriod, getInformationsArticles } from './service.js';
 
-const retrieveInformations = (year, order) => {
+const retrieveInformations = (dateStart, dateEnd, order) => {
     let listing = [];
-    getInformationsYear(year).then((data) => {
+    getInformationsPeriod(dateStart, dateEnd).then((data) => {
+        console.log(data)
         data.forEach((element) => {
-            listing.push({ "name": element.name, "count": element.tabArticles.length });
+            listing.push({ "name": element.name, "count": element.tabArticles.articles.length });
         });
         createRanking(dateStart, dateEnd, listing, order);
     });
 }
 
 const retrieveInformationsArticlesLiked = (dateStart, dateEnd, limit) => {
-    let information = getInformationsPeriod(dateStart, dateEnd, (limit-1));
+    let information = getInformationsArticles(dateStart, dateEnd, (limit-1));
 
     information.then(function(value) {
         createArticles(dateStart, dateEnd, value);
