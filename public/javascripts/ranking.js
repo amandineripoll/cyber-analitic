@@ -3,9 +3,9 @@ import { getInformationsArticles } from './service.js';
 
 const tabCountries = getCountries();
 
-const retrieveInformations = (dateStart, dateEnd, order) => {
+const retrieveInformations = (order) => {
     let listing = [];
-    getInformations(dateStart, dateEnd).then((data) => {
+    getInformations().then((data) => {
         data.forEach(element => {
             listing.push({"name" : element.name, "count" : element.tabArticle['metadata']['count']});
         });

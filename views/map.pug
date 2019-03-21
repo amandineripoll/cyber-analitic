@@ -8,19 +8,20 @@ block content
     .col-md-2.filter
       .title
         p Filtre de recherche
-      .period
-        p Période
-        input#dateStart(type='date')
-        input#dateEnd(type='date')
-      .select
-        select#continents
-          option(value='0' selected disabled) Choisir un continent
-          option(value='usa') Amérique
-          option(value='europe') Europe
+        select#years
+          option(value='0' selected disabled hidden) Choisir une année
+          option(value='2019') 2019
+          option(value='2018') 2018
+          option(value='2017') 2017
+          option(value='2016') 2016
+          option(value='2015') 2015
         select#countries
           option(value='0' selected disabled hidden) Choisir un pays
-          each country, index in tabCountries ? tabCountries : ['vide']
-            option(value='index') country.name
+          option(value='france') France
+          option(value='newyork') New York
+          option(value='sanfrancisco') San Francisco
+          option(value='belgium') Belgique
+          option(value='italia') Italie
         .submit
           button(type='button' class='btn btn-primary' id='submit-interval-date') Valider
 
