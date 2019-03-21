@@ -2,3 +2,31 @@
     width:300px;
     height:300px;
 }
+
+.evolution-harcelement {
+    width: 400px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1e2f4f;
+    padding-bottom: 10px;
+}
+
+.txt{
+    width: 300px;
+    height: 109px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    letter-spacing: normal;
+    text-align: left;
+    color: #747f92;
+}

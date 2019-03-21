@@ -5,19 +5,18 @@ var counts = [];
 
 $(document).ready(function() {
     getInformationsStats().then((data) => {
-        console.log(data);
-        for(let i = 0; i < tabYears.length; i++)
-        {
+        for(let i = 0; i < tabYears.length; i++) {
             var cpt = 0;
             for(let j = 0; j < data.length ; j++){
-                if(tabYears[i] === data[j].tabArticles[j].year)
-                {
-                    cpt += data[j].tabArticles[j]['count'];
-                    console.log(cpt);
+                console.log(data);
+                if(tabYears[i] == data[j].tabArticles[j].year) {
+                    cpt += data[j].tabArticles[j].count;
+                    console.log(cpt)
+
                 }
             }
             counts.push(cpt);
-            console.log(counts);
+            //console.log(counts);
         }
         generateChart();   
     }); 
