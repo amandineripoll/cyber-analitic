@@ -59,6 +59,10 @@
     border-radius: 5px;
 }
 
+.presentation .card-special, .presentation .card:last-child {
+    margin-left: 15px;
+}
+
 .presentation .card {
     min-height: 200px;
     margin-top: 23px;
