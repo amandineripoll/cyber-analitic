@@ -7,19 +7,17 @@ $(document).ready(function() {
     getInformationsStats().then((data) => {
         for(let i = 0; i < tabYears.length; i++) {
             var cpt = 0;
-            for(let j = 0; j < data.length ; j++){
-                console.log(data);
-                if(tabYears[i] == data[j].tabArticles[j].year) {
-                    cpt += data[j].tabArticles[j].count;
-                    console.log(cpt)
-
+            for(let j = 0; j < data.length ; j++) {
+                for(let k = 0; k < data[j].tabArticles.length; k++) {
+                    if(tabYears[i] == data[j].tabArticles[k].year) {
+                        cpt += data[j].tabArticles[k].count;
+                    }
                 }
             }
             counts.push(cpt);
-            //console.log(counts);
         }
-        generateChart();   
-    }); 
+        generateChart();
+    });
 });
 
 function generateChart(){
@@ -27,12 +25,12 @@ function generateChart(){
     var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'polarArea',
-    
+
         // The data for our dataset
         data: {
             labels: tabYears,
             datasets: [{
-                backgroundColor: 
+                backgroundColor:
                 ['rgba(93, 173, 226)',
                 'rgba(255, 51, 102)',
                 'rgba(214, 219, 223)',
@@ -43,7 +41,7 @@ function generateChart(){
                 data: counts
             }]
         },
-    
+
         // Configuration options go here
         options: {
             legend: {
@@ -55,5 +53,3 @@ function generateChart(){
         }
     });
 }
-
-
