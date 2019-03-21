@@ -76,7 +76,7 @@ const createArticles = (dateStart, dateEnd, data) => {
 retrieveInformation("20190201", "20190301", "ASC");
 
 /*
-* Création du classement
+* Récupération des articles
 */
 
 retrieveInformationArticlesLiked("20180101", "20190101", "2");

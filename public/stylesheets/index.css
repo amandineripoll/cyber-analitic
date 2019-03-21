@@ -74,7 +74,8 @@
 .presentation .card-special {
     min-height: 250px;
     border: solid 2px #1A8BFF;
-    padding: 35px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .presentation .cards {
@@ -90,6 +91,12 @@
     font-size: 14px;
     color : #1E2F4F;
     font-weight: bold;
+}
+
+.logo-cards {
+    color: #1A8BFF;
+    font-size: 70px;
+    padding-bottom: 10px;
 }
 
 .presentation .infos {
@@ -115,7 +122,7 @@
     transform: translateY(-50%);
 }
 
-.map > .hashtag, #evolution .hashtag {
+.map > .hashtag, #evolution .hashtag, #news .hashtag {
     font-size: 16px;
     font-weight: bold;
     color: #007bff;
@@ -148,9 +155,21 @@
 }
 
 #news {
-    height: 150px;
     background-color: #fff;
     position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#news .news {
+    padding-left: 10%;
+}
+
+#news .news-card {
+    border: solid 1px #a2a2a2;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #harassment {
@@ -164,7 +183,7 @@
     background-position: right -15% bottom 45%;
 }
 
-#harassment .title, #ranking .title{
+#harassment .title, #ranking .title, #news .title{
     color : #1E2F4F;
     font-size: 32px;
     font-weight: bold;
