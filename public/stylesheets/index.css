@@ -135,7 +135,7 @@
     color: #b1b1b1;
 }
 
-.map > a, #harassment a, #evolution a {
+.map > a, #harassment a, #evolution a,  #ranking a {
     margin-top: 15px;
     font-size: 12px;
 }
@@ -164,23 +164,33 @@
     background-position: right -15% bottom 45%;
 }
 
-#harassment .title {
+#harassment .title, #ranking .title{
     color : #1E2F4F;
     font-size: 32px;
     font-weight: bold;
 }
 
-#harassment .infos {
+#harassment .infos, #ranking .infos {
     font-size: 10px;
     color: #b1b1b1;
     width: 350px;
 }
 
-#harassment .block-infos {
+#harassment .block-infos, #ranking .block-infos {
     padding-top: 30px;
     left: 10%;
 }
 
 #evolution .block-evolution {
     padding-top: 75px;
+}
+
+#ranking {
+    background-color: #F7F8FB;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#ranking img {
+    margin-top: -55px;
 }
