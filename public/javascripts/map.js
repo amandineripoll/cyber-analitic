@@ -1,4 +1,4 @@
-import { getInformations, getCountries, getYears } from './service.js';
+import { getInformationsYear, getCountries, getYears } from './service.js';
 import { Country } from './country.js';
 
 var polygonSeries;
@@ -11,11 +11,13 @@ var selectCountries = document.getElementById('countries');
 var btnSubmit = document.getElementById('btnSubmit');
 
 $(document).ready(function() {
+    selectYears.value = 0;
+    selectCountries.value = 0;
     initializationMap();
 });
 
 btnSubmit.onclick = () => {
-    getInformations(selectYears.value).then((data) => {
+    getInformationsYear(selectYears.value).then((data) => {
         tabCountries = data;
         colorMap();
     });
@@ -74,30 +76,10 @@ const initializationMap = () => {
     // Make map load polygon (like country names) data from GeoJSON
     polygonSeries.useGeodata = true;
 
-    polygonSeries.data = [{
-        "id": "US",
-        "level": 1
-      }, {
-        "id": "BR",
-        "level": 1
-      }, {
-        "id": "AU",
-        "level": 2
-      }, {
-        "id": "CN",
-        "level": 1
-      }, {
-        "id": "FR",
-        "level": 2
-      },{
-        "id": "FR",
-        "level": 2
-      }]
-
     // Configure series
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = "{name}";
-    polygonTemplate.fill = am4core.color("#004494");
+    polygonTemplate.fill = am4core.color("#004494"); // chart.colors.getIndex(0)
 
     // Create hover state and set alternative fill color
     var hs = polygonTemplate.states.create("hover");
@@ -107,15 +89,15 @@ const initializationMap = () => {
     polygonTemplate.adapter.add("fill", function(fill, target) {
         // color level max
         if (target.dataItem.dataContext && target.dataItem.dataContext.level == 1) {
-            return am4core.color("#FF4633");
+            return am4core.color("#e65100");
         }
         // color level med
         else if (target.dataItem.dataContext && target.dataItem.dataContext.level == 2) {
-            return am4core.color("#FFB233");
+            return am4core.color("#fb8c00");
         }
         // color level min
         else if (target.dataItem.dataContext && target.dataItem.dataContext.level == 3) {
-            return am4core.color("#000");
+            return am4core.color("#ffb74d");
         }
         return fill;
     });

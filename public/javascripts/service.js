@@ -17,7 +17,7 @@ export const getCountries = () => {
 const tabCountries = getCountries();
 const tabYears = getYears();
 
-export const getInformations = (year) => {
+export const getInformationsYear = (year) => {
     return new Promise(function(resolve, reject) {
         var cpt = 0;
         // boucle sur la tabCountries pour faire une recherche d'edition par pays (=country)
@@ -26,11 +26,12 @@ export const getInformations = (year) => {
             request.open('GET', 'https://api.ozae.com/gnw/articles?date='+year+'0101__'+year+'1231&edition='+tabCountries[j].tabTranslation['edition']+'&query='+tabCountries[j].tabTranslation['word']+'&key=646c7b6710c14533be68450f2d61d15d', true)
             request.onload = function() {
                 let data = JSON.parse(this.response);
+                console.log(data);
                 if (request.status >= 200 && request.status < 400) {
                     tabCountries[j].tabArticles = data['articles'];
                     cpt++;
                     if(cpt == tabCountries.length) {
-                        console.log("données chargées");
+                        console.log("chargement terminé");
                         resolve(tabCountries);
                     }
                 } else {
@@ -42,7 +43,7 @@ export const getInformations = (year) => {
     });
 }
 
-export const getInformationsArticles = (dateStart, dateEnd, limit) => {
+export const getInformationsPeriod = (dateStart, dateEnd, limit) => {
     return new Promise(function(resolve, reject) {
         let request = new XMLHttpRequest();
         request.open('GET', 'https://api.ozae.com/gnw/articles?date='+dateStart+'__'+dateEnd+'&edition=fr-fr&query=harcèlement&order[col]=social_score&order[srt]=DESC&hard_limit='+limit+'&key=646c7b6710c14533be68450f2d61d15d', true)

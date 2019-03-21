@@ -1,11 +1,8 @@
-import { getInformations } from './service.js';
-import { getInformationsArticles } from './service.js';
-
-const tabCountries = getCountries();
+import { getInformationsYear, getInformationsPeriod } from './service.js';
 
 const retrieveInformations = (year, order) => {
     let listing = [];
-    getInformations(year).then((data) => {
+    getInformationsYear(year).then((data) => {
         data.forEach((element) => {
             listing.push({ "name": element.name, "count": element.tabArticles.length });
         });
@@ -14,7 +11,7 @@ const retrieveInformations = (year, order) => {
 }
 
 const retrieveInformationsArticlesLiked = (dateStart, dateEnd, limit) => {
-    let information = getInformationsArticles(dateStart, dateEnd, (limit-1));
+    let information = getInformationsPeriod(dateStart, dateEnd, (limit-1));
 
     information.then(function(value) {
         createArticles(dateStart, dateEnd, value);
