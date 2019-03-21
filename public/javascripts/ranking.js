@@ -3,11 +3,11 @@ import { Country } from './country.js';
 
 const tabCountries = getCountries();
 
-const retrieveInformations = (order) => {
+const retrieveInformations = (year, order) => {
     let listing = [];
-    getInformations().then((data) => {
+    getInformations(year).then((data) => {
         data.forEach(element => {
-            listing.push({"name" : element.name, "count" : element.tabArticle['metadata']['count']});
+            listing.push({ "name": element.name, "count": element.tabArticles.length });
         });
         createRanking(listing, order);
     });
@@ -34,7 +34,7 @@ const resetRanking = () => {
     $('#ranking.container .count p').html('_');
 }
 
-retrieveInformations("20181001", "20190101", "ASC");
+retrieveInformations("2018", "ASC");
 
 $( "#submit-interval-date" ).click(function() {
     let dateStart = $('#date-start').val().split("-").join("");
