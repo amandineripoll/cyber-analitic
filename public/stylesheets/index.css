@@ -220,3 +220,13 @@
 #ranking img {
     margin-top: -55px;
 }
+
+.fa-card {
+    font-size: 50px;
+    color: #1A8BFF;
+}
+
+.fa-card-plus {
+    font-size: 60px;
+    color: #1A8BFF;
+}

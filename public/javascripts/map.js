@@ -17,6 +17,7 @@ $(document).ready(function() {
 });
 
 btnSubmit.onclick = () => {
+    $('#loading').fadeIn();
     getInformationsYear(selectYears.value).then((data) => {
         tabCountries = data;
         colorMap();
@@ -48,6 +49,7 @@ const colorMap = () => {
           else if(size <= medMin && size > min) { level = 3; } // level min
           item.level = level;
         }
+        $('#loading').hide();
         return item;
     });
 }

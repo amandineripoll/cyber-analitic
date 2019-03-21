@@ -3,11 +3,11 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/map.css')
 
-  .row.content
+  .row.content.map-content
 
-    .col-md-2.filter
+    .col-md-3.filter
       .title
-        p Filtre de recherche
+        p Filtre de la carte du monde
         form(method='POST' action='/map')#filterForm
           div.form-group
             select#years
@@ -27,9 +27,12 @@ block content
               option(value='BE') Belgique
               option(value='DE') Germany
               option(value='IT') Italy
-          button.btn.btn-primary#btnSubmit(type='button') Valider
+          button.btn.btn-primary#btnSubmit(type='button') Rechercher
 
-    .col-md-10
+        #loading
+          img(src="images/loading.gif", alt="loading", width="125")
+
+    .col-md-9
       #map
 
   script(type='module', src='/javascripts/map.js')
