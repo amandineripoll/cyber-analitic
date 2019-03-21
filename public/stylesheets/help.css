@@ -1,0 +1,86 @@
+.shape {
+    width: 1920px;
+    height: 80px;
+    background-color: #ffffff;
+  }
+
+.Trac-4120 {
+    height: 720px;
+    background-color: #f7f8fb;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.divHarassment{
+    margin-left: 10px;
+
+
+}
+
+.Rectangle-283 {
+    width: 82px;
+    height: 3px;
+    background-color: #0682ff;
+    margin-bottom: 10px;
+  }
+
+.Que-faire-en-cas-de-harclement {
+    width: 550px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1e2f4f;
+}
+
+.txt-que-faire-en-cas-harcelement{
+    width: 350px;
+    height: 109px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    letter-spacing: normal;
+    text-align: left;
+    color: #747f92;
+}
+
+.btn-Contact-us
+{
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 5px 32px 0 rgba(3, 65, 128, 0.3);
+    background-color: #0682ff;
+    color:white;
+}
+
+.imgHelp{
+    width: 550px;
+}
+
+.alignCenterDiv{
+    align-items: center;
+}
+
+.border-bottom-left {
+    width: 82px;
+    height: 3px;
+    border-radius: 2.5px;
+    background-color: #0682ff;
+}
+
+hr{
+    display: block;
+    height: 2px;
+    background-color: aqua;
+    border: none;
+    width: 20%;
+    display: inline-block;
+}
