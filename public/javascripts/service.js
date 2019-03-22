@@ -1,6 +1,6 @@
 import { Country } from './country.js';
 
-export const getYears = () => ["2019", "2018", "2017", "2016", "2015"];
+export const getYears = () => ["2015", "2016", "2017", "2018", "2019"];
 export const getCountries = () => {
     let tab = [];
     tab.push(new Country("FR", "France", {"edition": "fr-fr","word": "harcèlement" }, []));

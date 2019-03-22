@@ -3,10 +3,16 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/stats.css')
 
-  .row.content
-      canvas#myChart
-      .col-md-5
-        h2.evolution-harcelement Evolution du harcèlement
-        p.txt Ce graphique montre le nombre d'article parlant d'harcèlement dans le monde sur 5 ans
+  .container
+
+    .row.content.content-stats
+        .col-md-12
+          h2.evolution-harcelement Evolution du harcèlement
+          p.txt Ce graphique montre le nombre d'article parlant du harcèlement dans le monde sur 5 ans.
+    
+    #loading
+      img(src="images/loading.gif", alt="loading", width="125")
+
+    canvas#myChart
 
   script(type='module', src='/javascripts/stats.js')
