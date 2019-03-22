@@ -42,11 +42,52 @@
 .active {
     border-radius: 4px;
     background-color: #0682ff;
-    padding: 8px;
+    padding: 12px;
+    color: #fff!important;
+}
+
+.active a {
     color: #fff!important;
 }
 
 body {
     padding:0px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+}
+
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+
+#burger-menu {
+    display: none;
+}
+
+#navbar-burger {
+    display: none;
+    margin-top: 25px;
+}
+
+#navbar-burger p{
+    width: 100%;
+    cursor: pointer;
+    padding: 8px;
+    margin-bottom: 0;
+}
+
+#navbar-burger p:hover{
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 890px) {
+    .ulMenu {
+        display: none;
+    }
+    #burger-menu {
+        display: inline;
+    }
 }
