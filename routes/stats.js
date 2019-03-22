@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET stats */
 router.get('/', function(req, res, next) {
-  res.render('stats', { title: 'Harassment-analytic - Statistiques' });
+  res.render('stats', { root: 'stats' });
 });
 
 module.exports = router;

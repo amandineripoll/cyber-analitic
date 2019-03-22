@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET ranking. */
 router.get('/', function(req, res, next) {
-  res.render('ranking', { title: 'Harassment-analytic - Classement' });
+  res.render('ranking', { root: 'ranking' });
 });
 
 module.exports = router;

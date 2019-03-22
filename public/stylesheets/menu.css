@@ -1,6 +1,5 @@
 .logo {
-    width: 150px;
-    height: 100%;
+    width: 120px;
   }
 
 .ulMenu {
@@ -32,6 +31,7 @@
 .linkMenu {
     color: #004494;
     margin-right: 45px;
+    font-size: 14px;
 }
 
 .linkMenu:hover {
@@ -39,12 +39,10 @@
     text-decoration:none;
 }
 
-.helpButton {
-    width: 50px;
-    height: 35px;
+.active {
     border-radius: 4px;
     background-color: #0682ff;
-    padding: 12px;
+    padding: 8px;
     color: #fff!important;
 }
 

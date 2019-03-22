@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET map */
 router.get('/', function(req, res, next) {
-  res.render('map', { title: 'Harassment-analytic - Carte du monde' });
+  res.render('map', { root: 'map' });
 });
 
 module.exports = router;

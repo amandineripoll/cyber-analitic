@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET map */
 router.get('/', function(req, res, next) {
-  res.render('legal-notice');
+  res.render('legal-notice', { root: 'legal-notice' });
 });
 
 module.exports = router;
