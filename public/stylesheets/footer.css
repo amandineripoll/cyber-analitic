@@ -1,0 +1,53 @@
+footer {
+    background: linear-gradient(to right, #0B325A, #0C56A1);;
+}
+
+.legal-notice {
+    border-top: solid 1px #c1c1c1;
+    height: 70px;
+}
+
+.legal-notice > a {
+    margin: 0 auto;
+    color: #c1c1c1;
+    font-size: 12px;
+    padding-top: 25px;
+}
+
+footer .section-logo {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 220px;
+}
+
+footer .section-logo > .title {
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+footer .section-logo > .infos {
+    font-size: 12px;
+    color: #c1c1c1;
+}
+
+.table, .contact {
+    margin-top: 25px;
+}
+
+.table .title, .contact .title {
+    font-size: 17px;
+    color: #fff;
+}
+
+.table .data, .contact .data {
+    font-size: 12px;
+    color: #b1b1b1;
+    margin-bottom: 5px;
+}
+
+.contact input {
+    padding: 5px;
+    margin-top: 10px;
+}

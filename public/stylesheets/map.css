@@ -1,0 +1,61 @@
+.filter {
+  background-color: #F1F4F8;
+  min-height: 425px;
+}
+
+#map {
+	  width: 100%;
+    height: 100%;
+}
+
+.title > p {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1E2F4F;
+    border-left: solid 2px #007bff;
+    padding-left: 10px;
+    margin-left: 35px;
+    margin-top: 20px;
+}
+
+.map-content {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+form {
+  margin-left: 35px;
+  margin-top: 25px;
+}
+
+button {
+  font-size: 12px!important;
+  margin-top: 15px;
+}
+
+#loading {
+  display: none;
+  margin-top: 25px;
+  text-align: center;
+}
+
+#legend {
+  margin-left: 35px;
+  margin-top: 25px;
+}
+
+#legend .color-level-3{
+  background-color: #e65100;
+  color: #e65100;
+}
+
+#legend .color-level-2{
+  background-color: #fb8c00;
+  color: #fb8c00;
+}
+
+#legend .color-level-1{
+  background-color: #ffb74d;
+  color: #ffb74d;
+}

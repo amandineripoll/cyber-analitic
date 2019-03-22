@@ -4,17 +4,18 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-  body
 
-  block main
-  .content
-      nav.row
-        .col-md-2
-          a(href='/') Accueil
-        .col-md-2
-          a(href='/') Carte
-        .col-md-2
-          a(href='/ranking') Classement
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.0/css/all.css", integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y", crossorigin="anonymous")
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+  include menu.pug
+  
   block content
+
+  include footer.pug

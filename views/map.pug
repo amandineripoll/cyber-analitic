@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/map.css')
+
+  .row.content.map-content
+
+    .col-md-3.filter
+      .title
+        p Filtre de la carte du monde
+        form(method='POST' action='/map')#filterForm
+          div.form-group
+            select#years
+              option(value='0' selected disabled) Choisir une année
+              option(value='2019') 2019
+              option(value='2018') 2018
+              option(value='2017') 2017
+              option(value='2016') 2016
+              option(value='2015') 2015
+          div.form-group
+            select#countries
+              option(value='0' selected disabled) Choisir un pays
+              option(value='FR') France
+              option(value='US') New York
+              option(value='sanfrancisco') San Francisco
+              option(value='GB') United Kingdom
+              option(value='BE') Belgique
+              option(value='DE') Germany
+              option(value='IT') Italy
+          button.btn.btn-primary#btnSubmit(type='button') Rechercher
+
+        #legend
+          .level-1
+            span.color-level-1 MMMM
+            |
+            |
+            span Level 1
+          .level-2
+            span.color-level-2 MMMM
+            |
+            |
+            span Level 2
+          .level-3
+            span.color-level-3 MMMM
+            |
+            |
+            span Level 3
+
+        #loading
+          img(src="images/loading.gif", alt="loading", width="125")
+
+    .col-md-9
+      #map
+
+  script(type='module', src='/javascripts/map.js')

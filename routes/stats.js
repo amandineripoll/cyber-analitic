@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET ranking. */
+/* GET stats */
 router.get('/', function(req, res, next) {
-  res.render('ranking', { root: 'ranking' });
+  res.render('stats', { root: 'stats' });
 });
 
 module.exports = router;

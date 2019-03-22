@@ -1,0 +1,75 @@
+link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+link(rel='stylesheet', href='/stylesheets/menu.css')
+
+nav.navbar.navbar-default.backgroundMenu
+    .container-fluid
+    
+        .navbar-header
+            a.linkMenu(href='/'): img.logo(src='images/logo.png')
+        ul.nav.navbar-nav.ulMenu
+            if root == 'accueil'
+                li.menuItems
+                    a.linkMenu.active(href='/') Accueil
+            else
+                li.menuItems
+                    a.linkMenu(href='/') Accueil
+            if root == 'map'
+                li.menuItems
+                    a.linkMenu.active(href='/map') Carte du monde
+            else
+                li.menuItems
+                    a.linkMenu(href='/map') Carte du monde
+            if root == 'ranking'
+                li.menuItems
+                    a.linkMenu.active(href='/ranking') Classement
+            else
+                li.menuItems
+                    a.linkMenu(href='/ranking') Classement
+            if root == 'stats'
+                li.menuItems
+                    a.linkMenu.active(href='/stats') Statistiques
+            else
+                li.menuItems
+                    a.linkMenu(href='/stats') Statistiques
+            if root == 'help'
+                li.menuItems
+                    a.linkMenu.active(href='/help') Besoin d'aide
+            else
+                li.menuItems
+                    a.linkMenu(href='/help') Besoin d'aide
+
+        button(type='button' id='burger-menu' class='navbar-toggler toggler-example' data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"): span.dark-blue-text: i.fas.fa-bars.fa-1x
+
+    .container-fluid#navbar-burger
+            if root == 'accueil'
+                p.active
+                    a.linkMenu(href='/') Accueil
+            else
+                p
+                    a.linkMenu(href='/') Accueil
+            if root == 'map'
+                p.active
+                    a.linkMenu(href='/map') Carte du monde
+            else
+                p
+                    a.linkMenu(href='/map') Carte du monde
+            if root == 'ranking'
+                p.active
+                    a.linkMenu(href='/ranking') Classement
+            else
+                p
+                    a.linkMenu(href='/ranking') Classement
+            if root == 'stats'
+                p.active
+                    a.linkMenu(href='/stats') Statistiques
+            else
+                p
+                    a.linkMenu(href='/stats') Statistiques
+            if root == 'help'
+                p.active
+                    a.linkMenu(href='/help') Besoin d'aide
+            else
+                p   
+                    a.linkMenu(href='/help') Besoin d'aide
+
+script(type='module', src='/javascripts/menu.js')

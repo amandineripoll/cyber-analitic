@@ -1,0 +1,93 @@
+.logo {
+    width: 120px;
+  }
+
+.ulMenu {
+    display: contents;
+}
+
+.backgroundMenu {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 999;
+}
+
+
+.menuItems {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: right;
+}
+
+.linkMenu {
+    color: #004494;
+    margin-right: 45px;
+    font-size: 14px;
+}
+
+.linkMenu:hover {
+    color: #004494;
+    text-decoration:none;
+}
+
+.active {
+    border-radius: 4px;
+    background-color: #0682ff;
+    padding: 12px;
+    color: #fff!important;
+}
+
+.active a {
+    color: #fff!important;
+}
+
+body {
+    padding:0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+}
+
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+
+#burger-menu {
+    display: none;
+}
+
+#navbar-burger {
+    display: none;
+    margin-top: 25px;
+}
+
+#navbar-burger p{
+    width: 100%;
+    cursor: pointer;
+    padding: 8px;
+    margin-bottom: 0;
+}
+
+#navbar-burger p:hover{
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 890px) {
+    .ulMenu {
+        display: none;
+    }
+    #burger-menu {
+        display: inline;
+    }
+}

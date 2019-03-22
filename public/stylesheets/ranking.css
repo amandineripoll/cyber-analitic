@@ -1,0 +1,223 @@
+#page-ranking > .row {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#ranking {
+    margin: 0 auto;
+}
+
+#ranking > .podium, #other-place > .podium {
+    position: relative;
+    height: 90px;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#ranking .data {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: Andale Mono, monospace;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#ranking .position p {
+    font-size: 5rem!important;
+}
+
+#ranking > .first-place {
+    background-color: #EBC245;
+    color: #fff;
+}
+
+#ranking > .first-place > .position {
+    color: #D7A611;
+}
+
+#ranking > .second-place {
+    background-color: #D0D0D0;
+    color: #fff;
+}
+
+#ranking > .second-place > .position {
+    color: #ACACAC; 
+}
+
+#ranking > .third-place {
+    background-color: #D3BC9A;
+    color: #fff;
+}
+
+#ranking > .third-place > .position {
+    color: #D1A462;
+}
+
+#ranking > .other-place, #other-place > .other-place {
+    background-color: #F3F3F3;
+}
+
+#ranking > .other-place > .position, #other-place > .other-place > .position {
+    color: #DCDCDC;
+}
+
+#filtre {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #f9f9f9;
+    padding-left: 25px;
+}
+
+#filtre > .title {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1E2F4F;
+}
+
+#filtre > .title:last-child {
+    margin-top: 75px;
+}
+
+#filtre > .title > p {
+    border-left: solid 2px #007bff;
+    padding-left: 10px;
+}
+
+
+#filtre > .date, #filtre > .order {
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+#filtre > .date > p, #filtre > .order > p {
+    font-size: 17px;
+    color: #a2a2a2;
+}
+
+#filtre > .order > label, #filtre > .date > span, #filtre > .date > input {
+    font-size: 12px;
+}
+
+#filtre > .submit {
+    padding-left: 10px;
+}
+
+#other-place {
+    display: none;
+}
+
+#more, #less {
+    display: none;
+    position: relative;
+    height: 40px;
+    width: 75%;
+    margin: 0 auto;
+    background-color: #007bff;
+    border-color: #007bff;
+    cursor: pointer;
+}
+
+#more:hover, #less:hover {
+    background-color: #0066D3;
+    border-color: #0066D3;
+}
+
+#more p, #less p {
+    color: #fff;
+    font-weight: normal!important;
+    font-size: 14px!important;
+}
+
+#ranking .podium-title, #page-ranking .title-ranking, #date {
+    position: relative;
+    height: 20px;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#ranking .podium-title {
+    font-weight: bold;
+    color: #1E2F4F;
+}
+
+#page-ranking .title-ranking {
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1E2F4F;
+}
+
+#page-ranking #date-articles {
+    font-size: 13px;
+    color: #a2a2a2;
+    font-weight: normal;
+    padding-left: 15px;
+}
+
+#date {
+    color: grey;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 12px;
+    padding-bottom: 50px;
+}
+
+.btn-reset {
+    background-color: #e2e6ea!important;
+    border-color: #e2e6ea!important;
+}
+
+.btn-reset:hover {
+    background-color: #dae0e5!important;
+    border-color: #dae0e5!important;
+}
+
+.articles {
+    margin-top: 100px;
+}
+
+.card-article {
+    width: 80%;
+    margin: 0 auto;
+    border: solid 1px #a2a2a2;
+}
+
+#articles {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+#articles .card-article:last-child {
+    margin-top: 5px;
+}
+
+.btn {
+    font-size: 12px!important;
+}
+
+.nbr-like {
+    color : #007bff;
+    text-align: right;
+    padding-right: 2px;
+}
+
+#articles .title {
+    font-size: 12px;
+    color: #a2a2a2;
+    padding-left: 10px;
+}
+
+#articles .link-more{
+    text-align: center;
+}
+
+#loading {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}

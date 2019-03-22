@@ -1,0 +1,261 @@
+#synopsis {
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    position: relative;
+}
+
+.line {
+    width: 70px;
+    height: 4px;
+    background-color: #007bff;
+}
+
+.synopsis {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.synopsis > .title {
+    color : #fff;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.synopsis > p {
+    width: 376px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.presentation, .evolution {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.presentation .title {
+    font-size: 12px;
+    color : #007bff;
+    font-weight: bold;
+}
+
+.presentation .issue {
+    font-size: 30px;
+    font-weight: bold;
+    color : #1E2F4F;
+}
+
+.presentation .answer {
+    font-size: 12px;
+    color: #b1b1b1;
+}
+
+.presentation .card, .presentation .card-special {
+    border-radius: 5px;
+}
+
+.presentation .card-special, .presentation .card:last-child {
+    margin-left: 15px;
+}
+
+.presentation .card {
+    min-height: 200px;
+    margin-top: 23px;
+    border: solid 1px #1A8BFF;
+    padding: 20px;
+    background-color: #F7F8FB;
+}
+
+.presentation .card-special {
+    min-height: 250px;
+    border: solid 2px #1A8BFF;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.presentation .cards {
+    margin-top: 25px;
+}
+
+.presentation .card img {
+    margin: 0 auto;
+}
+
+.presentation .title-card {
+    padding-top: 10px;
+    font-size: 14px;
+    color : #1E2F4F;
+    font-weight: bold;
+}
+
+.logo-cards {
+    color: #1A8BFF;
+    font-size: 70px;
+    padding-bottom: 10px;
+}
+
+.presentation .infos {
+    font-size: 10px;
+    color: #b1b1b1;
+}
+
+.presentation a {
+    font-size: 12px;
+}
+
+#map {
+    height: 600px;
+    background-color: #F7F8FB;
+    position: relative;
+}
+
+.map {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 300px;
+    transform: translateY(-50%);
+}
+
+.map > .hashtag, #evolution .hashtag, #news .hashtag {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.map > .title, #evolution .title {
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #1E2F4F;
+}
+
+.map > .infos, #evolution .infos {
+    font-size: 10px;
+    color: #b1b1b1;
+    width: 350px;
+}
+
+.map > a, #harassment a, #evolution a,  #ranking a {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.map-image {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+#map .btn-ranking {
+    border: solid 2px #007bff!important;
+    color: #007bff!important;
+    font-weight: bold;
+}
+
+#news {
+    background-color: #fff;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#news .news {
+    padding-left: 10%;
+}
+
+#news .news-card {
+    border: solid 1px #1A8BFF;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 320px;
+    background: #fdfdfd;
+}
+
+#harassment {
+    padding-top: 175px;
+    padding-bottom: 175px;
+    background-color: #F7F8FB;
+    position: relative;
+    background-image: url('../images/background-harassment.png');
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: right -15% bottom 45%;
+}
+
+#harassment .title, #ranking .title, #news .title{
+    color : #1E2F4F;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#harassment .infos, #ranking .infos {
+    font-size: 10px;
+    color: #b1b1b1;
+    width: 350px;
+}
+
+#harassment .block-infos, #ranking .block-infos {
+    padding-top: 30px;
+    left: 10%;
+}
+
+#evolution .block-evolution {
+    padding-top: 75px;
+}
+
+#ranking {
+    background-color: #F7F8FB;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#ranking img {
+    margin-top: -55px;
+}
+
+.fa-card {
+    font-size: 50px;
+    color: #1A8BFF;
+}
+
+.fa-card-plus {
+    font-size: 60px;
+    color: #1A8BFF;
+}
+
+.nbr-like {
+    color : #007bff;
+    text-align: right;
+    padding-right: 2px;
+}
+
+#news .news-card .title {
+    font-size: 12px;
+    color: #a2a2a2;
+    padding-left: 10px;
+    min-height: 90px;
+}
+
+#news .link-more{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#news .img {
+    min-height: 140px;
+}
+
+#news img {
+    height: 150px;
+    object-fit: cover;
+}
