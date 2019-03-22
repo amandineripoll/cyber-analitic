@@ -4,8 +4,8 @@ Le but d’Harassment-analytic est de partager un ensemble d’information sur l
 
 ### Collaborateurs
 
-* Chef de projet : [Amandine RIPOLL](https://www.linkedin.com/in/amandine-ripoll-975888107/) 
-* Développeuse : [Leyla LE NOAN](https://www.linkedin.com/in/leyla-lenoan/)
+* Chef de projet/Développeur : [Amandine RIPOLL](https://www.linkedin.com/in/amandine-ripoll-975888107/) 
+* Développeur : [Leyla LE NOAN](https://www.linkedin.com/in/leyla-lenoan/)
 * Développeur : [Rémi BUCHAILLAT](https://www.linkedin.com/in/r%C3%A9mi-buchaillat-67aa1a134/)
 * Désigner : [Yanis ELMALEHl](https://www.linkedin.com/in/yaniselmaleh/)
 * Marketing : [Myriam KASMI](https://www.linkedin.com/in/myriam-kasmi-184348aa/)
