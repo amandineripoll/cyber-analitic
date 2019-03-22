@@ -17,11 +17,15 @@ $(document).ready(function() {
 });
 
 btnSubmit.onclick = () => {
-    $('#loading').fadeIn();
-    getInformationsYear(selectYears.value).then((data) => {
-        tabCountries = data;
-        colorMap();
-    });
+    if($('#years').val() != null) {
+        $('#loading').fadeIn();
+        getInformationsYear(selectYears.value).then((data) => {
+            tabCountries = data;
+            colorMap();
+        });
+    } else {
+        console.log('select element')
+    }
 }
 
 const colorMap = () => {
